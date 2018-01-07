@@ -1,0 +1,47 @@
+---
+ChatBotAgent:
+  lex_config:
+    bot_name: PuppetBot
+    bot_alias: puppetmoster
+    user_id: 00001
+    content_type: "audio/l16; rate=16000; channels=1"
+  polly_config:
+    voice_id: Ivy
+
+PuppetBotSession:
+  greeting_message: 'Hello, I am Puppet monster.'
+  delay_between_dialogs: 0.0  # ms
+
+MPG321AudioPlayer:
+  player_offset: 100          # ms
+
+CognitoAuthenticator:
+  username: xxxxx
+  password: xxxxx
+  cognito_pool_id: xxxxx
+  client_id: xxxxx
+  identity_pool_id: xxxxx
+  region_name: xxxxx
+
+VisemePlayer:
+  ServoController:
+    channel: 8            
+    frequency: 60         # Hz
+    upper_limit: 600      # pulse length out of 4096
+    lower_limit: 400      # pulse length out of 4096
+  time_interval: 10       # ms
+  sliding_window: 100     # ms
+  player_offset: 0        # ms
+  
+ChocolateDispenser:
+  ServoController:
+    channel: 0          
+    frequency: 60         # Hz
+    upper_limit: 900      # pulse length out of 4096
+    lower_limit: 100      # pulse length out of 4096
+  collect_input: 900      # pulse length out of 4096
+  dispense_input: 100     # pulse length out of 4096
+  count: 5
+
+RokgnitionTrigger:
+  check_interval: 100    # ms 
